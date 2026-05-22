@@ -1,8 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://java-application-production-b3af.up.railway.app*',
+      },
+    ];
   },
-}
+};
+
 
 module.exports = nextConfig
