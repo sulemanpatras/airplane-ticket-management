@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://java-application-production-b3af.up.railway.app/api/:path*',
+        destination: '*',
       },
     ];
   },
